@@ -6,7 +6,7 @@ const JokeAbstract = () => {
     <div className="joke__container">
       <div className="abstract">
         <h3 className='font-25'>Noteb00k</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse omnis distinctio, fuga dolorum quasi a at vero dignissimos laborum velit voluptatem sint.</p>
+        <p>This is a NoteB00k app made using React JS, HTML, CSS and for backend Node JS, Express, validators, jwt and for DB MYSQL</p>
       </div>
       <div className="joke">
         <h3 className='font-25'>Joke for you</h3>

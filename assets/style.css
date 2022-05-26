@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
 
+:root{
+    --primary: #A0BCC2;
+    --secondary: #F1EEE9;
+    --eh: #354259;
+    --white:rgb(243, 239, 239);
+    --pink:pink;
+}
 * {
     padding: 0;
     margin: 0;
@@ -11,13 +18,19 @@
 
 .head__container {
     height: 80px;
-    background: pink;
     width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     font-size: 18px;
+    background-color: var(--eh);
+    color: var(--white);
+}
+
+.head__left h3 a {
+    color: white;
+    letter-spacing: 5px;
 }
 
 .head__right {
@@ -34,21 +47,23 @@
 
 .footer__container {
     height: 75px;
-    background: pink;
+    background-color: var(--eh);
     width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
     font-size: 18px;
+    color: var(--white);
 }
 
 .joke__container {
     width: 100vw;
-    background: palevioletred;
+    background-color: var(--primary);
     padding: 20px 30px;
     display: flex;
     justify-content: center;
+    border-top: 2px solid purple;
 }
 
 .abstract {
@@ -87,25 +102,25 @@
     display: flex;
     width: 100vw;
     height: fit-content;
-    padding: 20px 30px;
-    background: yellow;
+    padding: 0px 0px;
+    
     
 }
 
 .body__left {
     width: 65%;
-    background: rgb(211, 125, 125);
+    
 }
 
 .body__right {
     width: 35%;
-    background: rgb(163, 103, 103);
+    
 }
 
 .left__menu {
     width: 100%;
     height: 50px;
-    background-color: grey;
+    background-color: var(--primary);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -121,7 +136,7 @@
 .right__menu {
     width: 100%;
     height: 50px;
-    background-color: grey;
+    background-color: var(--primary);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -131,18 +146,18 @@
 
 
 .notes {
-    background-color: rgb(121, 101, 101);
+    background: var(--pink);
     min-height: 300px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 20px;
+    grid-column-gap: 0px;
     grid-row-gap: 10px;
+    border-right: 1px solid purple;
 }
 
 .note__container {
-    background-color: yellow !important;
-    border: 2px solid rgb(0, 0, 0);
+    border: 1px solid var(--eh);
     padding: 9px 10px;
     margin: 10px 15px;
 }
@@ -151,7 +166,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: lime;
     border-bottom: 2px solid purple;
     min-height: 50px;
 }
@@ -164,7 +178,6 @@
 }
 .note__body{
     font-size: 18px;
-    background: pink;
     padding: 10px 4px;
     border-bottom: 2px solid purple;
     min-height: 150px;
@@ -200,15 +213,14 @@
 }
 .form{
     min-height: 400px;
-    background-color: white;
     display: flex;
     width: 100%;
-    align-items: center;
+    height: 100%;
     margin: 0 auto;
     justify-content: center;
+    background-color: var(--secondary);
 }
 .form__body{
-    border: 2px solid red;
     padding: 10px 20px;
     margin: 10px 20px;
     width: 100%;
@@ -257,6 +269,7 @@ input[type=submit]:hover{
 .no_desc {
     text-decoration: none;
     list-style: none;
+    color: var(--white);
 }
 .hover_underline:hover{
     border-bottom: 1px solid purple;
@@ -276,6 +289,7 @@ input[type=submit]:hover{
     background: rgb(107, 207, 207);
     transition: 0.2s;
     font-weight: 500;
+    color: black;
 }
 
 .add_bordertransparent {
@@ -302,7 +316,6 @@ input[type=submit]:hover{
 @media only screen and (max-width: 480px) {
     .head__container {
         height: 100px;
-        background: pink;
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -316,7 +329,7 @@ input[type=submit]:hover{
     }
 
     .footer__container {
-        background: pink;
+        background-color: var(--eh);
         width: 100vw;
         display: flex;
         justify-content: space-around;
@@ -325,5 +338,38 @@ input[type=submit]:hover{
         flex-direction: column;
         height: 120px;
         padding: 10px 0px;
+    }
+    .body__container{
+        flex-direction: column-reverse;
+    }
+    .body__right{
+        width: 100%;
+    }
+    .body__left{
+        width: 100%;
+    }
+    .notes{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .joke__container{
+        flex-direction: column;
+    }
+    .abstract{
+        width: 100%;
+    }
+    .abstract p{
+        width: 100%;
+    }
+    .joke{
+        width: 100%;
+    }
+    .joke p{
+        width: 100%;
+    }
+    .left__menu{
+        border: 2px solid purple;
+    }
+    .right__menu{
+        border: 2px solid purple;
     }
 }

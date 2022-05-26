@@ -146,23 +146,7 @@ const Body = () => {
                                 <a href="" className="delete actionbtn">Delete</a>
                             </div>
                         </div>
-                        <div className="note__container card__yellow">
-                            <div className="note__head">
-                                <div className="title">
-                                    Lorem ipsum dolor sit amet.
-                                </div>
-                                <div className="time">
-                                    12 noon
-                                </div>
-                            </div>
-                            <div className="note__body">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, deleniti? Temporibus, ullam quia dicta porro, asperiores, tempora in quos vitae est magnam illo. Vitae ipsam possimus voluptates rerum natus. Tenetur quo est nemo? Dolorem ducimus accusamus obcaecati, quasi eveniet culpa quibusdam nam enim porro totam.
-                            </div>
-                            <div className="note_foot">
-                                <a href="" className="update actionbtn">update</a>
-                                <a href="" className="delete actionbtn">Delete</a>
-                            </div>
-                        </div>
+                        
 
                     </div>
                 </div>
