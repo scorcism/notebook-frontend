@@ -149,7 +149,7 @@
 
 .notes {
     background: var(--pink);
-    min-height: 300px;
+    min-height: 35rem;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -221,6 +221,7 @@
     padding: 2px 5px;
     border-radius: 3px;
     color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .form {
@@ -253,16 +254,24 @@
     margin: 12px 0px;
 }
 
-.form__body input,
+input,
 .form__body textarea {
     font-size: 18px;
     padding: 5px 10px;
     outline: none;
     border: transparent;
-    background: pink;
     width: 100%;
 }
-
+.form__body input, .form__body textarea{
+    background-color: pink;
+}
+#tags{
+    background: pink;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 4px 3px;
+}
 input[type=submit] {
     background-color: rgb(247, 95, 95);
     margin: 20px 0px;
@@ -275,6 +284,7 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: rgb(255, 0, 0);
     color: white;
+    transition: 0.2s;
 }
 
 .footer__container a {
@@ -348,7 +358,12 @@ input[type=submit]:hover {
 .black {
     color: black;
 }
-
+.time{
+    text-transform: capitalize;
+}
+.logout{
+    cursor: pointer;
+}
 .add_bg,
 .hover_underlinebox:hover {
     border-bottom: 2px solid purple;
@@ -366,20 +381,29 @@ input[type=submit]:hover {
     font-family: 'Koulen', cursive;
 }
 
-.card__red {
+/* .card__red {
     border: 2px sold red !important;
     background-color: rgba(255, 0, 0, 0.281) !important;
-}
+} */
 
-.card__green {
+/* .card__green {
     border: 2px sold green !important;
     background-color: rgba(0, 128, 0, 0.233) !important;
+} */
+.head__mid{
+    display: flex;
+    text-transform: capitalize;
+}
+.head__mid p{
+    color:red;
+    font-weight: 500;
+    letter-spacing: 3px;
 }
 
-.card__yellow {
+/* .card__yellow {
     border: 2px sold yellow !important;
     background-color: rgba(255, 255, 0, 0.705) !important;
-}
+} */
 
 /* Media Queries */
 @media only screen and (max-width: 480px) {

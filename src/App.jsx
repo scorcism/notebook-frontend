@@ -10,21 +10,26 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Logout from "./component/Logout"
+import NoteState from "./context/NoteState"
 
 function App() {
 
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Body />} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/about" element={<About />} />
-        
-      </Routes>
-      <JokeAbstract />
-      <Footer />
+      <NoteState>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Body />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/logout" element={<Logout />} />
+
+        </Routes>
+        <JokeAbstract />
+        <Footer />
+      </NoteState>
     </BrowserRouter>
   )
 }
