@@ -14,13 +14,14 @@ const Form = () => {
     }
     const formSubmit = async (e) => {
         e.preventDefault();
-        console.log(data);
+        // console.log(data);
         addNote(data.title,data.description,data.tag);
         setData({
             title:"",
             description:"",
             tag:""
         })
+        // console.log(data)
     }
    
 

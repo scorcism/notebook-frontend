@@ -31,7 +31,7 @@ const Note = ({ id, title, description, tag }) => {
                     {description && <p>{description}</p>}
                 </div>
                 <div className="note_foot">
-                    <p  className="update actionbtn">update</p>
+                    <p title="coming soon" className="update actionbtn">update</p>
                     <p onClick={(e)=>{deleteNote(id)}} className="delete actionbtn">Delete</p>
                 </div>
             </div>

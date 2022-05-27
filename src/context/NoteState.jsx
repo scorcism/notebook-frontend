@@ -21,18 +21,15 @@ const NoteState = (props) => {
   }
 
   const getNotes = async () => {
-    if (localStorage.getItem("auth-token")) {
-
-      const response = await fetch(`${host}/api/notes/fetchnotes`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          "auth-token": token
-        }
-      });
-      const json = await response.json()
-      setNotes(json)
-    }
+    const response = await fetch(`${host}/api/notes/fetchnotes`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        "auth-token": token
+      }
+    });
+    const json = await response.json()
+    setNotes(json)
   }
 
   const addNote = async (title, description, tag) => {
@@ -48,7 +45,7 @@ const NoteState = (props) => {
     const note = await response.json();
   }
 
-  const deleteNote  = async (id) => {
+  const deleteNote = async (id) => {
     const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
       method: 'DELETE',
       headers: {
@@ -61,8 +58,9 @@ const NoteState = (props) => {
   }
 
 
+
   return (
-    <NoteContext.Provider value={{ getUserCred, userCred, notes, getNotes, addNote ,deleteNote }}>
+    <NoteContext.Provider value={{ getUserCred, userCred, notes, getNotes, addNote, deleteNote }}>
       {props.children}
     </NoteContext.Provider>
   )

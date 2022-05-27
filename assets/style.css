@@ -146,16 +146,46 @@
     border-left: 2px solid purple;
 }
 
+.notes__container {
+    min-height: 35em;
+    border-right: 1px solid purple;
+    background: pink;
+}
+
+.nocontent {
+    text-align: center;
+    padding: 50px 0px;
+    color: purple;
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    0% {
+        color: purple
+    }
+
+    50% {
+        color: red;
+        text-decoration: underline;
+
+    }
+
+    90% {
+        color: rgb(212, 101, 37);
+    }
+
+    100% {
+        color: rgb(184, 11, 184);
+    }
+}
 
 .notes {
     background: var(--pink);
-    min-height: 35rem;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 10px;
-    border-right: 1px solid purple;
 }
 
 .note__container {
@@ -197,6 +227,7 @@
 
 .update {
     background-color: rgba(0, 128, 0, 0.664);
+    cursor: no-drop !important;
 }
 
 .delete {
@@ -262,16 +293,20 @@ input,
     border: transparent;
     width: 100%;
 }
-.form__body input, .form__body textarea{
+
+.form__body input,
+.form__body textarea {
     background-color: pink;
 }
-#tags{
+
+#tags {
     background: pink;
     outline: none;
     cursor: pointer;
     font-size: 17px;
     padding: 4px 3px;
 }
+
 input[type=submit] {
     background-color: rgb(247, 95, 95);
     margin: 20px 0px;
@@ -303,7 +338,8 @@ input[type=submit]:hover {
     background-repeat: no-repeat;
     background-position: center;
 }
-.magic{
+
+.magic {
     text-align: center;
 }
 
@@ -358,12 +394,16 @@ input[type=submit]:hover {
 .black {
     color: black;
 }
-.time{
+
+.time {
     text-transform: capitalize;
 }
-.logout{
+
+.logout {
     cursor: pointer;
+    padding: 2px 3px;
 }
+
 .add_bg,
 .hover_underlinebox:hover {
     border-bottom: 2px solid purple;
@@ -390,12 +430,13 @@ input[type=submit]:hover {
     border: 2px sold green !important;
     background-color: rgba(0, 128, 0, 0.233) !important;
 } */
-.head__mid{
+.head__mid {
     display: flex;
     text-transform: capitalize;
 }
-.head__mid p{
-    color:red;
+
+.head__mid p {
+    color: red;
     font-weight: 500;
     letter-spacing: 3px;
 }

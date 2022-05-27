@@ -10,30 +10,51 @@ if (localStorage.getItem("auth-token")) {
 }
 
 const Body = () => {
-    const { notes, getNotes } = useContext(noteContext);
+    const { notes, getNotes,getTagNotes } = useContext(noteContext);
+    let allNote;
     useEffect(() => {
         getNotes();
         //eslint-disable-next-line
     }, [notes])
     // console.log(notes)
-    let allNote = notes.result
-    // console.log(allNote)
+    allNote = notes.result
+        // console.log(allNote)
+    
 
     return (
         <>
             {user_loggedin ? <div className="body__container" id="body">
                 <div className="body__left">
                     <div className="left__menu">
-                        <p className="font20 black  no_desc add_bordertransparent border_radius hover_underline">All Notes</p>
-                        <p className="font20 black  no_desc add_bordertransparent border_radius hover_underline">Personal</p>
-                        <p className="font20 black  no_desc add_bordertransparent border_radius hover_underline">Imp</p>
-                        <p className="font20 black  no_desc add_bordertransparent border_radius hover_underline">todo</p>
+                        <p onClick={(e)=>{
+                            e.preventDefault(e)
+                            getNotes()
+                        //eslint-disable-next-line
+                    }}
+                        className="font20 black  no_desc add_bordertransparent border_radius hover_underline">All Notes</p>
+                        <p onClick={(e)=>{
+                            e.preventDefault()
+                            console.log("personal")
+                        }} className="soon font20 black  no_desc add_bordertransparent border_radius hover_underline">Personal</p>
+                        <p onClick={(e)=>{
+                            e.preventDefault()
+                            console.log("imp")
+                            //eslint-disable-next-line
+                        }} className="soon font20 black  no_desc add_bordertransparent border_radius hover_underline">Imp</p>
+                        <p onClick={(e)=>{
+                            e.preventDefault()
+                            console.log("todo")
+                            //eslint-disable-next-line
+                        }} className="soon font20 black  no_desc add_bordertransparent border_radius hover_underline">todo</p>
                     </div>
+                    <div className="notes__container">
+                    {allNote && allNote.length ==0 && <h1 className="nocontent">Add a Note :)</h1>}
                     <div className="notes">
                         {allNote && allNote.map((note) => {
                             return <Note key={note.id} tag={note.tag} id={note.id} title={note.title} description={note.description} />
                             // console.log("Note")
                         })}
+                    </div>
                     </div>
                 </div>
                 <div className="body__right">
