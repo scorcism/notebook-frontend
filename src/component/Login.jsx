@@ -15,7 +15,7 @@ const Login = () => {
     const formSubmit = async (e) => {
         e.preventDefault();
         // console.log(cred);
-        const res = await fetch("http://localhost:5000/api/auth/login", {
+        const res = await fetch("https://notebookscor32k.herokuapp.com/api/auth/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

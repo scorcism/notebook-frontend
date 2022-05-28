@@ -2,7 +2,7 @@ import NoteContext from "./noteContext";
 import { useState } from "react";
 
 const NoteState = (props) => {
-  const host = "http://localhost:5000"
+  const host = "https://notebookscor32k.herokuapp.com"
   const [userCred, setuserCred] = useState("abhishek is here");
   const [notes, setNotes] = useState([]);
   const token = localStorage.getItem("auth-token")

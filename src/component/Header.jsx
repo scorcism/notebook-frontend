@@ -10,7 +10,7 @@ const Header = () => {
     const token = localStorage.getItem("auth-token")
     
     const getUserName = async () => {
-        const res = await fetch("http://localhost:5000/api/auth/getuser", {
+        const res = await fetch("https://notebookscor32k.herokuapp.com/api/auth/getuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

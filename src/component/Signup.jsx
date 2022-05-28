@@ -12,7 +12,7 @@ const Signup = () => {
     const formSubmit = async (e) => {
         e.preventDefault();
         console.log(cred);
-        const res = await fetch("http://localhost:5000/api/auth/createuser", {
+        const res = await fetch("https://notebookscor32k.herokuapp.com/api/auth/createuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
