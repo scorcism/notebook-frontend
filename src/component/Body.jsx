@@ -13,8 +13,10 @@ const Body = () => {
     const { notes, getNotes,getTagNotes } = useContext(noteContext);
     let allNote;
     useEffect(() => {
-        getNotes();
-        //eslint-disable-next-line
+        if(user_loggedin){
+            getNotes();
+            //eslint-disable-next-line
+        }
     }, [notes])
     // console.log(notes)
     allNote = notes.result

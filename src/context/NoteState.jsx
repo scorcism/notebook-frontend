@@ -1,5 +1,5 @@
 import NoteContext from "./noteContext";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const NoteState = (props) => {
   const host = "https://notebookscor32k.herokuapp.com"
@@ -19,6 +19,10 @@ const NoteState = (props) => {
     // console.log(json.result[0])
     setuserCred(json.result[0])
   }
+  useEffect(() => {
+    getUserCred();
+  }, [notes])
+  
 
   const getNotes = async () => {
     const response = await fetch(`${host}/api/notes/fetchnotes`, {
