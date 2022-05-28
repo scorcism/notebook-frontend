@@ -419,6 +419,7 @@ input[type=submit]:hover {
 
 .fancy_heading {
     font-family: 'Koulen', cursive;
+    letter-spacing: 3px;
 }
 
 /* .card__red {

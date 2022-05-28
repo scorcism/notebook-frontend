@@ -11,7 +11,7 @@
     background-position: center;
 }
 .soon{
-    cursor: no-drop !important;
+    cursor: no-drop !important ;
 }
 .s_data{
     border: 1px solid rgb(110, 108, 108);

@@ -1,0 +1,57 @@
+.about{
+    background-color: pink;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.about_me{
+    padding: 20px 10px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border:2px solid purple;
+    border-radius: 3px;
+}
+.ul_li{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.about_project{
+    border: 2px solid rgb(80, 4, 80);
+    border-radius: 3px;
+    padding: 20px 10px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.ul_li > a{
+    margin: 10px 00px;
+}
+.ul_li{
+line-height: 1.4em;
+}
+.li_head{
+    font-size: 1.2em;
+    margin: 10px 0px;
+    text-decoration: underline;
+}
+@media only screen and (max-width: 480px) {
+    .about{
+        display: block;
+    }
+    .about_me{
+        width: 100%;
+    }
+    .about_project{
+        width: 100%;
+        margin: 10px 0px;
+    }
+}
