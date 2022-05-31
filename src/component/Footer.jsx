@@ -2,8 +2,8 @@ const Footer = () => {
     return (
         <>
             <div className="footer__container">
-                <a className="no_desc " href="">Copyright @Abhishek Pathak</a>
-                <a className="no_desc " href="">Twitter :) </a>
+                <a className="no_desc " >Copyright @Abhishek Pathak</a>
+                <a className="no_desc " target="_blank" href="https://theuselessweb.com/">The useless web :) </a>
                 
                 <div className="footer_right">
                     <a className="no_desc   hover_underlinebox" target="_blank" href="https://github.com/scorcism/notebook-frontend">Frontend</a>
