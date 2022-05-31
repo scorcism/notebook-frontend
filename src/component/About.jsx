@@ -27,7 +27,7 @@ const About = () => {
           <li className="ul_li">
             <a href="https://www.phpmyadmin.co/" target="_blank" rel="noopener noreferrer">MYSQL Hosting</a> <br/>
             <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer">App Hosting</a> <br/>
-            <a href="https://www.heroku.com/" target="_blank" rel="noopener noreferrer">DB Hosting</a> <br/>
+            <a href="https://www.heroku.com/" target="_blank" rel="noopener noreferrer">Backend Hosting</a> <br/>
           </li>
         </ul>
       </div>
