@@ -22,5 +22,5 @@ CSS
 
 ## Developer 
 
-ME :) 
+ME :)  -- Open for collaboration
 
